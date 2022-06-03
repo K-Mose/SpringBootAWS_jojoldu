@@ -44,6 +44,10 @@ public class HelloControllerTest {
                         .param("name", name)
                         .param("amount", String.valueOf(amount))
         ).andExpect(status().isOk())
+                /*
+                 JSON 형식으로 반환되기 때문에 JSON Path로 받음
+                 http://localhost:8080/hello/dto?name=Mose&amount=999 -> {"name":"Mose","amount":999}
+                 */
                 .andExpect(jsonPath("$.name", is(name)))
                 .andExpect(jsonPath("$.amount", is(amount)));
     }
