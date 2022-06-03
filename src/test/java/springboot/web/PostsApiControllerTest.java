@@ -47,8 +47,8 @@ public class PostsApiControllerTest {
 
         String url = "http://localhost:"+ port +"/api/v1/posts";
 
-        restTemplate.postForEntity(url, postsSaveRequestDto, Long.class);
-        restTemplate.postForEntity(url, postsSaveRequestDto, Long.class);
+//        restTemplate.postForEntity(url, postsSaveRequestDto, Long.class);
+//        restTemplate.postForEntity(url, postsSaveRequestDto, Long.class);
         ResponseEntity<Long> responseEntity = restTemplate.postForEntity(url, postsSaveRequestDto, Long.class);
         assertThat(responseEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
         assertThat(responseEntity.getBody()).isGreaterThan(0L);

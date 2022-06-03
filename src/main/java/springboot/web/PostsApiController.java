@@ -7,7 +7,7 @@ import springboot.web.dto.PostsResponseDto;
 import springboot.web.dto.PostsSaveRequestDto;
 import springboot.web.dto.PostsUpdateRequestDto;
 
-@RequiredArgsConstructor
+@RequiredArgsConstructor // 의존성 주입을 자동으로 해줌
 @RestController
 public class PostsApiController {
 
